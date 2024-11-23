@@ -5,5 +5,4 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="java" class="com.cybertek.services.Java" scope="prototype"/>
-    <bean id="selenium" class="com.cybertek.services.Selenium"/>
 </beans>
