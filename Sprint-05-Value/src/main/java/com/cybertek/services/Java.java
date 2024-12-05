@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.Arrays;
 
 @Component
@@ -42,6 +44,13 @@ public class Java implements Course {
         System.out.println("Weekly Teaching Hours: "+(20 + extraSessions.getHours()))
     ;}
 
-
+@PostConstruct
+    public void postConstruct() {
+    System.out.println("Executing Post Construct");
+}
+    @PreDestroy
+    public void preDestroy(){
+        System.out.println("Executing Pre Destroy");
+}
 }
 
